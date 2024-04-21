@@ -34,7 +34,7 @@ export default function Accordion(){
 				{
 					data && data.length > 0 ?
 					data.map(dataItem =>
-						<div className = "item">
+						<div className = "item" key={dataItem.id}>
 							<div onClick={enabledMultiSelection ? () => handleMultiSelection(dataItem.id) : () => handleSingleSelection(dataItem.id)} className = "title">
 								<h3>{dataItem.question}</h3>
 								<span>+</span>
