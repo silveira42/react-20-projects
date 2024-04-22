@@ -12,7 +12,7 @@ function App() {
 			<RandomColor />
 			<StarRating />
 			<ImageSlider url='https://picsum.photos/v2/list' page='1' limit='10' />
-			<LoadMoreButton url='https://dummyjson.com/products' />
+			<LoadMoreButton url='https://dummyjson.com/products' limit='20' />
 		</div>
 	);
 }

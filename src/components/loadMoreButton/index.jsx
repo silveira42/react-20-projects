@@ -10,8 +10,7 @@ export default function LoadMoreButton({ url, limit = 20 }) {
 	const [loadButtonEnabled, setLoadButtonEnabled] = React.useState(true);
 
 	function handleLoadMore() {
-		const newSkip = skip + limit;
-		setSkip(newSkip);
+		setSkip(parseInt(skip) + parseInt(limit));
 	}
 
 	async function fetchProducts(url, skip, limit) {
@@ -48,10 +47,6 @@ export default function LoadMoreButton({ url, limit = 20 }) {
 			setLoading(false);
 		}
 	}
-
-	React.useEffect(() => {
-		if (url !== '') fetchProducts(url, skip, limit);
-	}, [url]);
 
 	React.useEffect(() => {
 		if (url !== '') fetchProducts(url, skip, limit);
