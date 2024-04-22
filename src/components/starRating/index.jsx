@@ -20,7 +20,7 @@ export default function StarRating({ starAmount = 10 }) {
 
 	return (
 		<div className='star-rating'>
-			{[...Array(starAmount)].map((_, index) => {
+			{[...Array(parseInt(starAmount))].map((_, index) => {
 				index += 1;
 
 				return (

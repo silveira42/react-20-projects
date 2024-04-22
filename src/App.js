@@ -10,7 +10,7 @@ function App() {
 		<div className='App'>
 			<Accordion />
 			<RandomColor />
-			<StarRating />
+			<StarRating starAmount='10' />
 			<ImageSlider url='https://picsum.photos/v2/list' page='1' limit='10' />
 			<LoadMoreButton url='https://dummyjson.com/products' limit='20' />
 		</div>
