@@ -1,8 +1,8 @@
 // single selection
 
-import React from "react";
-import data from "./data";
-import "./styles.css";
+import React from 'react';
+import data from './data';
+import './styles.css';
 
 export default function Accordion() {
 	const [selected, setSelected] = React.useState(null);
@@ -29,31 +29,31 @@ export default function Accordion() {
 	}
 
 	return (
-		<div className="wrapper">
+		<div className='wrapper'>
 			<button onClick={() => setEnabledMultiSelection(!enabledMultiSelection)}>
-				{enabledMultiSelection ? "Disable" : "Enable"} multi select
+				{enabledMultiSelection ? 'Disable' : 'Enable'} multi select
 			</button>
-			<div className="accordion">
+			<div className='accordion'>
 				{data && data.length > 0 ? (
-					data.map((dataItem) => (
-						<div className="item" key={dataItem.id}>
+					data.map(dataItem => (
+						<div className='item' key={dataItem.id}>
 							<div
 								onClick={
 									enabledMultiSelection
 										? () => handleMultiSelection(dataItem.id)
 										: () => handleSingleSelection(dataItem.id)
 								}
-								className="title"
+								className='title'
 							>
 								<h3>{dataItem.question}</h3>
 								<span>+</span>
 							</div>
 							{enabledMultiSelection
 								? multiSelected.indexOf(dataItem.id) !== -1 && (
-										<div className="content">{dataItem.answer}</div>
+										<div className='content'>{dataItem.answer}</div>
 								  )
 								: selected === dataItem.id && (
-										<div className="content">{dataItem.answer}</div>
+										<div className='content'>{dataItem.answer}</div>
 								  )}
 						</div>
 					))

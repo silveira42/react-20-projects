@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React from "react";
-import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
-import "./styles.css";
+import React from 'react';
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
+import './styles.css';
 
 export default function ImageSlider({ url, page = 1, limit = 10 }) {
 	const [images, setImages] = React.useState([]);
@@ -24,7 +24,7 @@ export default function ImageSlider({ url, page = 1, limit = 10 }) {
 			const data = await response.json();
 
 			if (!data) {
-				throw new Error("Server error. Empty response.");
+				throw new Error('Server error. Empty response.');
 			}
 
 			setImages(data);
@@ -36,31 +36,31 @@ export default function ImageSlider({ url, page = 1, limit = 10 }) {
 	}
 
 	React.useEffect(() => {
-		if (url !== "") fetchImages(url);
+		if (url !== '') fetchImages(url);
 	}, [url]);
 
 	if (errorMessage !== null) {
 		return (
-			<div className="container">
-				<h3 className="error">Error. Please reload the page.</h3>
-				<p className="error">Details: {errorMessage}</p>
+			<div className='container'>
+				<h3 className='error'>Error. Please reload the page.</h3>
+				<p className='error'>Details: {errorMessage}</p>
 			</div>
 		);
 	}
 
 	if (loading) {
 		return (
-			<div className="container">
-				<h3 className="loading">Loading... Please wait</h3>
+			<div className='container'>
+				<h3 className='loading'>Loading... Please wait</h3>
 			</div>
 		);
 	}
 
 	return (
-		<div className="container">
+		<div className='container'>
 			<BsArrowLeftCircleFill
 				onClick={handlePrevious}
-				className="arrow arrow-left"
+				className='arrow arrow-left'
 			/>
 			{images && images.length
 				? images.map((image, index) => (
@@ -70,18 +70,18 @@ export default function ImageSlider({ url, page = 1, limit = 10 }) {
 							src={image.download_url}
 							className={
 								currentImage === index
-									? "current-image"
-									: "current-image current-image-hidden"
+									? 'current-image'
+									: 'current-image current-image-hidden'
 							}
 						/>
 				  ))
 				: null}
 			<BsArrowRightCircleFill
 				onClick={handleNext}
-				className="arrow arrow-right"
+				className='arrow arrow-right'
 			/>
 
-			<span className="circle-indicators">
+			<span className='circle-indicators'>
 				{images && images.length
 					? images.map((_, index) => (
 							<button
@@ -89,8 +89,8 @@ export default function ImageSlider({ url, page = 1, limit = 10 }) {
 								onClick={() => setCurrentImage(index)}
 								className={
 									currentImage === index
-										? "active-indicator"
-										: "current-indicator inactive-indicator"
+										? 'active-indicator'
+										: 'current-indicator inactive-indicator'
 								}
 							></button>
 					  ))
