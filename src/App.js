@@ -5,6 +5,7 @@ import LoadMoreButton from './components/loadMoreButton';
 import RandomColor from './components/randomColor';
 import StarRating from './components/starRating';
 import TreeView from './components/treeView';
+import QrCodeGenerator from './components/qrCodeGenerator';
 import menus from './components/treeView/data';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 			<ImageSlider url='https://picsum.photos/v2/list' page='1' limit='10' />
 			<LoadMoreButton url='https://dummyjson.com/products' limit='20' />
 			<TreeView list={menus} />
+			<QrCodeGenerator />
 		</div>
 	);
 }

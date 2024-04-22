@@ -1,0 +1,24 @@
+.qr-code-container{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+	justify-content: center;
+}
+
+.qr-code-input {
+	padding: 10px 20px;
+}
+
+.qr-code-button {
+	cursor: pointer;
+}
+
+.qr-code-button-disabled {
+	cursor: not-allowed;
+	color: grey;
+}
+
+.qr-code {
+	padding: 10px 20px;
+}
