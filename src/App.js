@@ -7,6 +7,7 @@ import StarRating from './components/starRating';
 import TreeView from './components/treeView';
 import QrCodeGenerator from './components/qrCodeGenerator';
 import menus from './components/treeView/data';
+import LightDarkTheme from './components/lightDarkTheme';
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 			<LoadMoreButton url='https://dummyjson.com/products' limit='20' />
 			<TreeView list={menus} />
 			<QrCodeGenerator />
+			<LightDarkTheme />
 		</div>
 	);
 }
