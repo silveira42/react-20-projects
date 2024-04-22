@@ -4,6 +4,8 @@ import ImageSlider from './components/imageSlider';
 import LoadMoreButton from './components/loadMoreButton';
 import RandomColor from './components/randomColor';
 import StarRating from './components/starRating';
+import TreeView from './components/treeView';
+import menus from './components/treeView/data';
 
 function App() {
 	return (
@@ -13,6 +15,7 @@ function App() {
 			<StarRating starAmount='10' />
 			<ImageSlider url='https://picsum.photos/v2/list' page='1' limit='10' />
 			<LoadMoreButton url='https://dummyjson.com/products' limit='20' />
+			<TreeView list={menus} />
 		</div>
 	);
 }
