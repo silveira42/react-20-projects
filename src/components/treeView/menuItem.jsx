@@ -3,7 +3,7 @@ import MenuList from './menuList';
 import { FaMinus, FaPlus } from 'react-icons/fa';
 import './styles.css';
 
-export default function MenuItem({ item }) {
+export default function MenuItem({ theme, item }) {
 	const [displayCurrentChildren, setDisplayCurrentChildren] = React.useState(
 		{}
 	);
@@ -17,7 +17,7 @@ export default function MenuItem({ item }) {
 
 	return (
 		<li>
-			<div className='menu-item'>
+			<div className='menu-item' data-theme={theme}>
 				<p>{item.label}</p>
 				{item && item.children && item.children.length ? (
 					<span onClick={() => handleToggleChildren(item.label)}>
@@ -33,7 +33,7 @@ export default function MenuItem({ item }) {
 			item.children &&
 			item.children.length > 0 &&
 			displayCurrentChildren[item.label] ? (
-				<MenuList list={item.children} />
+				<MenuList theme={theme} list={item.children} />
 			) : null}
 		</li>
 	);
