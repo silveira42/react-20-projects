@@ -1,51 +1,58 @@
-.container {
-	position: relative;
+.image-slider-wrapper {
 	display: flex;
 	height: 100vh;
 	width: 100vw;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+	gap: 20px;
+	background-color: var(--background);
 }
 
-.error {
-	background-color: red;
+.image-slider-wrapper h1 {
+	color: var(--text-primary)
 }
 
-.loading {
-	background-color: yellow;
+.image-slider-container {
+	width: 80%;
+	height: 80%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.current-image {
+.image-slider-current-image {
 	border-radius: 0.5rem;
-	box-shadow: 0px 0px 7px #666;
+	box-shadow: 0px 0px 7px var(--neutral);
 	width: 100%;
 	height: 100%;
 }
 
-.arrow {
+.image-slider-arrow {
 	position: absolute;
 	width: 2rem;
 	height: 2rem;
 	color: #fff;
-	filter: drop-shadow(0px 0px 5px #555)
+	filter: drop-shadow(0px 0px 5px var(--neutral))
 }
 
-.arrow-left {
+.image-slider-arrow-left {
 	left: 1rem;
 }
 
-.arrow-right {
+.image-slider-arrow-right {
 	right: 1rem;
 }
 
-.circle-indicators {
+.image-slider-circle-indicators {
 	display: flex;
 	position: absolute;
 	bottom: 1rem;
 }
 
-.current-indicator {
-	background-color: #fff;
+.image-slider-current-indicator {
+	background-color: var(--background);
 	height: 15px;
 	width: 15px;
 	border-radius: 50%;
@@ -55,10 +62,10 @@
 	cursor: pointer;
 }
 
-.current-image-hidden {
+.image-slider-current-image-hidden {
 	display: none;
 }
 
-.inactive-indicator {
-	background-color: grey;
+.image-slider-inactive-indicator {
+	background-color: var(--neutral);
 }

@@ -3,6 +3,7 @@
 	--text-primary: #000000;
 	--button-bg: #000000;
 	--button-text: #ffffff;
+	--neutral: #444444
 }
 
 [data-theme="dark"] {
@@ -10,4 +11,13 @@
 	--text-primary: #ffffff;
 	--button-bg: #ffffff;
 	--button-text: #000000;
+	--neutral: #666666
+}
+
+.error {
+	background-color: red;
+}
+
+.loading {
+	background-color: yellow;
 }
