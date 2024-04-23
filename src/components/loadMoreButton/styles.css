@@ -10,6 +10,7 @@
 }
 
 .load-more-product-list {
+	margin: 10px 70px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 10px;
@@ -18,7 +19,7 @@
 .load-more-product {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	border: 0.5px solid var(--button-bg);
 	border-radius: 10px;
@@ -27,8 +28,8 @@
 }
 
 .load-more-product img {
-	width: 20vw;
-	max-height: 400px;
+	width: 10rem;
+	height: 8rem;
 }
 
 /* title */

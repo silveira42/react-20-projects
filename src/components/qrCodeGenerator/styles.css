@@ -29,9 +29,24 @@
 .qr-code-button {
 	padding: 10px 20px;
 	border-radius: 10px;
-	cursor: pointer;
 	background-color: var(--button-bg);
+	font-size: medium;
+	font-weight: 600;
+}
+
+.qr-code-button-enabled {
+	cursor: pointer;
 	color: var(--button-text);
+}
+
+.qr-code-button-enabled:hover {
+	transform: scale(1.02);
+	transition: all .1s;
+}
+
+.qr-code-button-enabled:active {
+	transform: scale(0.95);
+	transition: all .1s;
 }
 
 .qr-code-button-disabled {

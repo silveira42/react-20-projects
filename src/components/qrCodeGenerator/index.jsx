@@ -26,7 +26,7 @@ export default function QrCodeGenerator({ theme }) {
 					onClick={handleGenerate}
 					className={
 						input && input.trim() !== ''
-							? 'qr-code-button'
+							? 'qr-code-button qr-code-button-enabled'
 							: 'qr-code-button qr-code-button-disabled'
 					}
 					title={
