@@ -1,18 +1,6 @@
-:root{
-	--background: #ffffff;
-	--text-primary: #000000;
-	--button-bg: #000000;
-	--button-text: #ffffff;
-}
+@import '../../App.css';
 
-[data-theme="dark"] {
-	--background: #000000;
-	--text-primary: #ffffff;
-	--button-bg: #ffffff;
-	--button-text: #000000;
-}
-
-.light-dark-mode-main .light-dark-mode-container{
+.light-dark-mode-wrapper .light-dark-mode-container{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -20,7 +8,7 @@
 	gap: 30px;
 }
 
-.light-dark-mode-main {
+.light-dark-mode-wrapper {
 	background-color: var(--background);
 	height: 100vh;
 	display: flex;
@@ -30,13 +18,13 @@
 	transition: all .5s;
 }
 
-.light-dark-mode-main .light-dark-mode-container p {
+.light-dark-mode-wrapper .light-dark-mode-container p {
 	color: var(--text-primary);
 	font-size: 40px;
 	margin: 0px;
 }
 
-.light-dark-mode-main .light-dark-mode-container button {
+.light-dark-mode-wrapper .light-dark-mode-container button {
 	background-color: var(--button-bg);
 	border: 1px solid var(--button-bg);
 	color: var(--button-text);
