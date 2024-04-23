@@ -2,7 +2,7 @@
 import React from 'react';
 import './styles.css';
 
-export default function LoadMoreButton({ url, limit = 20 }) {
+export default function LoadMoreButton({ theme, url, limit = 20 }) {
 	const [products, setProducts] = React.useState([]);
 	const [skip, setSkip] = React.useState(0);
 	const [loading, setLoading] = React.useState(false);
@@ -10,7 +10,7 @@ export default function LoadMoreButton({ url, limit = 20 }) {
 	const [loadButtonEnabled, setLoadButtonEnabled] = React.useState(true);
 
 	function handleLoadMore() {
-		setSkip(parseInt(skip) + parseInt(limit));
+		setSkip(skip + parseInt(limit));
 	}
 
 	async function fetchProducts(url, skip, limit) {
@@ -62,19 +62,17 @@ export default function LoadMoreButton({ url, limit = 20 }) {
 	}
 
 	return (
-		<div className='load-container'>
-			<div className='product-list'>
+		<div className='load-more-wrapper' data-theme={theme}>
+			<div className='load-more-product-list'>
 				{products && products.length
 					? products.map(product => (
-							<div className='product'>
-								<img
-									className='product-image'
-									src={product.thumbnail}
-									alt={product.description}
-								/>
-								<h3 className='product-title'>{product.title}</h3>
-								<h4 className='product-description'>{product.description}</h4>
-								<p className='product-price'>${product.price}.00</p>
+							<div className='load-more-product'>
+								<img src={product.thumbnail} alt={product.description} />
+								<h3>{product.title}</h3>
+								<div className='load-more-product-container'>
+									<h4>{product.description}</h4>
+									<p>${product.price}.00</p>
+								</div>
 							</div>
 					  ))
 					: null}

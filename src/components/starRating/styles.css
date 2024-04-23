@@ -1,9 +1,26 @@
-.star-rating {
+@import '../../App.css';
+
+.star-rating-wrapper {
 	height: 50vh;
 	width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: var(--background);
+	flex-direction: column;
+	gap: 20px;
+}
+
+.star-rating-wrapper h1 {
+	color: var(--text-primary)
+}
+
+.star-rating-container {
+	padding: 15px 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
 }
 
 .active {
@@ -11,5 +28,5 @@
 }
 
 .inactive {
-	color: #000
+	color: var(--button-bg)
 }
