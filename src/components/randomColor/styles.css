@@ -1,0 +1,27 @@
+@import '../../App.css';
+
+.random-color-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.random-color-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+.random-color-container h1 {
+	color: var(--text-primary);
+}
+
+.random-color-container button {
+	padding: 10px 10px;
+	border-radius: 10px;
+	margin: 10px 10px;
+	background-color: var(--button-bg);
+	color: var(--button-text);
+}
