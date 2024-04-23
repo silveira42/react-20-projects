@@ -1,24 +1,46 @@
-.qr-code-container{
+@import '../../App.css';
+
+.qr-code-wrapper{
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
 	width: 100vw;
 	justify-content: center;
+	align-items: center;
+	background-color: var(--background);
+	gap: 20px
+}
+
+.qr-code-wrapper h1 {
+	color: var(--text-primary);
 }
 
 .qr-code-input {
 	padding: 10px 20px;
 }
 
+.qr-code-input input {
+	padding: 10px 20px;
+	margin: 10px 10px;
+	border-radius: 10px;
+	font-size: medium;
+}
+
 .qr-code-button {
+	padding: 10px 20px;
+	border-radius: 10px;
 	cursor: pointer;
+	background-color: var(--button-bg);
+	color: var(--button-text);
 }
 
 .qr-code-button-disabled {
 	cursor: not-allowed;
-	color: grey;
+	color: var(--neutral);
 }
 
 .qr-code {
-	padding: 10px 20px;
+	border: 1px solid var(--button-bg);
+	padding: 40px 40px;
+	background-color: #fff;
 }

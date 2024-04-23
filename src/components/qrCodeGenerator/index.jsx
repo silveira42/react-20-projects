@@ -2,7 +2,7 @@ import React from 'react';
 import QRCode from 'react-qr-code';
 import './styles.css';
 
-export default function QrCodeGenerator() {
+export default function QrCodeGenerator({ theme }) {
 	const [qrCode, setQrCode] = React.useState('');
 	const [input, setInput] = React.useState('');
 
@@ -12,7 +12,7 @@ export default function QrCodeGenerator() {
 	}
 
 	return (
-		<div className='qr-code-container'>
+		<div className='qr-code-wrapper' data-theme={theme}>
 			<h1>QR Code Generator</h1>
 			<div className='qr-code-input'>
 				<input
@@ -27,7 +27,7 @@ export default function QrCodeGenerator() {
 					className={
 						input && input.trim() !== ''
 							? 'qr-code-button'
-							: 'qr-code-button-disabled'
+							: 'qr-code-button qr-code-button-disabled'
 					}
 					title={
 						input && input.trim() !== ''
