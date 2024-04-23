@@ -9,6 +9,7 @@
 	background-color: var(--background);
 	flex-direction: column;
 	gap: 20px;
+	transition: all .5s;
 }
 
 .star-rating-wrapper h1 {

@@ -7,10 +7,11 @@
 	flex-direction: column;
 	gap: 20px;
 	background-color: var(--background);
+	transition: all .5s;
 }
 
 .image-slider-wrapper h1 {
-	color: var(--text-primary)
+	color: var(--text-primary);
 }
 
 .image-slider-container {

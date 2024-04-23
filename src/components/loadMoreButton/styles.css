@@ -5,6 +5,7 @@
 	flex-direction: column;
 	gap: 20px;
 	background-color: var(--background);
+	transition: all .5s;
 }
 
 .load-more-product-list {

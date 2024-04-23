@@ -5,12 +5,14 @@ import RandomColor from '../../components/randomColor';
 import StarRating from '../../components/starRating';
 import TreeView from '../../components/treeView';
 import QrCodeGenerator from '../../components/qrCodeGenerator';
-import menus from '../../components/treeView/data';
 import LightDarkTheme from '../../components/lightDarkTheme';
+
+import menus from '../../components/treeView/data';
 
 export default function Home({ onToggleTheme, theme }) {
 	return (
-		<div className='App'>
+		<div className='home-wrapper'>
+			<LightDarkTheme theme={theme} onToggle={onToggleTheme} />
 			<Accordion theme={theme} />
 			<RandomColor theme={theme} />
 			<StarRating theme={theme} starAmount='10' />
@@ -27,7 +29,6 @@ export default function Home({ onToggleTheme, theme }) {
 			/>
 			<TreeView theme={theme} list={menus} />
 			<QrCodeGenerator theme={theme} />
-			<LightDarkTheme theme={theme} onToggle={onToggleTheme} />
 		</div>
 	);
 }

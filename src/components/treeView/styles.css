@@ -4,6 +4,7 @@
 	min-height: 100vh;
 	width: 350px;
 	background: var(--background);
+	transition: all .5s;
 }
 
 .menu-list-container {
