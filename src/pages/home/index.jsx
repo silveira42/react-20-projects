@@ -8,8 +8,9 @@ import QrCodeGenerator from '../../components/qrCodeGenerator';
 import LightDarkTheme from '../../components/lightDarkTheme';
 
 import menus from '../../components/treeView/data';
+import ScrollIndicator from '../../components/scrollIndicator';
 
-export default function Home({ onToggleTheme, theme }) {
+export default function Home({ onToggleTheme, theme, scrollPercentage }) {
 	return (
 		<div className='home-wrapper'>
 			<LightDarkTheme theme={theme} onToggle={onToggleTheme} />
@@ -29,6 +30,7 @@ export default function Home({ onToggleTheme, theme }) {
 			/>
 			<TreeView theme={theme} list={menus} />
 			<QrCodeGenerator theme={theme} />
+			<ScrollIndicator scrollPercentage={scrollPercentage} />
 		</div>
 	);
 }
