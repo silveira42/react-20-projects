@@ -1,0 +1,33 @@
+@import '../../App.css';
+
+.tabs-wrapper {
+	height: 100vh;
+	background-color: var(--background);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.tabs-header {
+	display: flex;
+	flex-direction: row;
+	padding: 20px 20px;
+	margin-bottom: 20px;
+}
+
+.tab-item {
+	background-color: var(--button-bg);
+	color: var(--button-text);
+	font-weight: 600;
+	font-size: medium;
+	padding: 20px 40px;
+	border: 1px solid #000;
+	border-radius: 10px;
+	margin: 0px 5px
+}
+
+.tabs-content {
+	background-color: var(--background);
+	color: var(--text-primary)
+}

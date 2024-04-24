@@ -9,8 +9,28 @@ import LightDarkTheme from '../../components/lightDarkTheme';
 
 import menus from '../../components/treeView/data';
 import ScrollIndicator from '../../components/scrollIndicator';
+import Tabs from '../../components/tabs';
 
 export default function Home({ onToggleTheme, theme, scrollPercentage }) {
+	const tabsContent = [
+		{
+			label: 'Tab 1',
+			content: <div>Example</div>,
+		},
+		{
+			label: 'Tab 2',
+			content: <div>Examplegerger</div>,
+		},
+		{
+			label: 'Tab 3',
+			content: <div>adsfhgtshtrhj</div>,
+		},
+	];
+
+	function handleTabChange(currentTab) {
+		console.log(currentTab);
+	}
+
 	return (
 		<div className='home-wrapper'>
 			<LightDarkTheme theme={theme} onToggle={onToggleTheme} />
@@ -30,6 +50,11 @@ export default function Home({ onToggleTheme, theme, scrollPercentage }) {
 			/>
 			<TreeView theme={theme} list={menus} />
 			<QrCodeGenerator theme={theme} />
+			<Tabs
+				tabsContent={tabsContent}
+				onChange={handleTabChange}
+				theme={theme}
+			/>
 			<ScrollIndicator scrollPercentage={scrollPercentage} />
 		</div>
 	);
