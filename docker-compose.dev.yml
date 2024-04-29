@@ -1,0 +1,14 @@
+---
+name: react-20-projects-dev
+services:
+  app:
+    container_name: react-20-projects-dev-c
+    image: react-20-projects-dev-i
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+    ports:
+      - "3042:3000"

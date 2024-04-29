@@ -1,0 +1,16 @@
+---
+name: react-20-projects-prod
+services:
+  app:
+    container_name: react-20-projects-prod-c
+    image: react-20-projects-prod-i:1.0
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+        - "8069:80"
+
+# docker image tag react-20-projects-prod-i:1.0 silveira42/landing-page:1.0
+# docker image tag react-20-projects-prod-i:1.0 silveira42/landing-page:latest
+# docker push silveira42/landing-page:1.0
+# docker push silveira42/landing-page:latest
